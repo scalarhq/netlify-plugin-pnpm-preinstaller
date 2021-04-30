@@ -1,5 +1,5 @@
 {
-  "name": "@modfy/netlify-plugin-pnpm-preinstaller",
+  "name": "netlify-plugin-pnpm-preinstaller",
   "version": "0.0.1",
   "description": "Netlify Build plugin - Plugin to install pnpm on netlify",
   "main": "src/index.js",
@@ -15,7 +15,7 @@
     "netlify-plugin",
     "netlify"
   ],
-  "author": "modfy <hello@modfy.video>",
+  "author": "Modfy Inc <hello@modfy.video>",
   "license": "MIT",
   "repository": {
     "type": "git",
