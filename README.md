@@ -1,9 +1,19 @@
-Netlify Build plugin pnpm-preinstaller - Plugin to install pnpm on netlify.
+# Netlify Build plugin pnpm-preinstaller - Plugin to install pnpm on netlify.
 
-# Install
+## Usage
 
-Please install this plugin from the Netlify app.
 
-# Configuration
+1. Install plugin
+```
+yarn add @modfy/netlify-plugin-pnpm-preinstaller
+```
+2. Add it as the **first** plugin in your netlify toml file
+```
+[[plugins]]
+    package = "@modfy/netlify-plugin-pnpm-preinstaller"
+```
+3. Done!
 
-The following `inputs` options are available.
+## SLA
+
+This is not in active development, just something we made to use internally. If you find bugs or issue you can make an issue and we might get to it, no promises. Ideally just fork the repo and makes changes as needed
