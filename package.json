@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-pnpm-preinstaller",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Netlify Build plugin - Plugin to install pnpm on netlify",
   "files": [
     "src/**/*.js",
