@@ -1,21 +1,30 @@
 # Netlify Build plugin pnpm-preinstaller - Plugin to install pnpm on netlify.
 
+
+**This cannot be used as a global plugin but only a local plugin**
+ 
 ## Usage
 
 1. Install plugin
 
 ```
-yarn add netlify-plugin-pnpm-preinstaller
+npx netlify-plugin-pnpm-preinstaller
 ```
 
 2. Add it as the **first** plugin in your netlify toml file
 
 ```
 [[plugins]]
-    package = "netlify-plugin-pnpm-preinstaller"
+     package = "./plugins/pnpm-preinstaller"
 ```
 
-3. Done!
+3. Point `npm` to `/dev/null`
+```
+[build.environment]
+        NPM_FLAGS="--prefix=/dev/null"
+```
+
+4. Done!
 
 ## SLA
 
