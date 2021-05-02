@@ -1,7 +1,1 @@
-name: 'netlify-plugin-pnpm-preinstaller'
-inputs: []
-# Example inputs:
-#  - name: example
-#    description: Example description
-#    default: 5
-#    required: false
+name: pnpm-preinstaller
