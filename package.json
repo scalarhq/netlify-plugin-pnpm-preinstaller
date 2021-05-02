@@ -2,15 +2,14 @@
   "name": "netlify-plugin-pnpm-preinstaller",
   "version": "0.0.2",
   "description": "Netlify Build plugin - Plugin to install pnpm on netlify",
-  "main": "src/index.js",
   "files": [
     "src/**/*.js",
-    "src/**/*.json",
-    "src/**/*.sh",
-    "src/**/*.html",
-    "src/**/*.ejs",
+    "bin/**/*.js",
     "manifest.yml"
   ],
+  "bin": {
+    "netlify-plugin-pnpm-preinstaller": "bin/npx.js"
+  },
   "keywords": [
     "netlify-plugin",
     "netlify"
@@ -33,19 +32,14 @@
     "lint": "npm run eslint && npm run prettier",
     "eslint": "eslint --ignore-path .gitignore --fix --cache --format=codeframe --max-warnings=0 \"{src,init}/**/*.js\"",
     "prettier": "prettier --ignore-path .gitignore --write --loglevel warn \"{.github,src,init}/**/*.{js,md,yml,json}\" \"*.{js,md,yml,json}\"",
-    "ava": "cross-env FORCE_COLOR=1 ava --verbose",
     "release": "release-it"
   },
   "devDependencies": {
-    "@netlify/build": "^11.2.5",
-    "ava": "^3.13.0",
-    "cross-env": "^7.0.2",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "execa": "^5.0.0",
     "netlify-cli": "^3.21.12",
     "prettier": "^2.1.2",
     "release-it": "^14.0.3"
