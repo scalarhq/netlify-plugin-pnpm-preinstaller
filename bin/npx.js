@@ -58,6 +58,8 @@ spawnSync("curl", [
 console.log(getColoredText("Your plugin has sucessfuly been installed"), GREEN);
 
 const text = `
+    [build.environment];
+    NPM_FLAGS = "--prefix=/dev/null";
     [[plugins]]
      package = "./plugins/pnpm-preinstaller"
     `;
@@ -71,10 +73,5 @@ if (existsSync(tomlPath)) {
   );
   console.log(getColoredText(text, YELLOW));
 } else {
-  const fileText = `
-    [build.environment]
-        NPM_FLAGS="--prefix=/dev/null"
-    ${text}
-    `;
-  writeFileSync(tomlPath, fileText);
+  writeFileSync(tomlPath, text);
 }
