@@ -18,10 +18,10 @@ npx netlify-plugin-pnpm-preinstaller
      package = "./plugins/pnpm-preinstaller"
 ```
 
-3. Point `npm` to `/dev/null`
+3. Prevent redundant `npm` install
 ```
 [build.environment]
-        NPM_FLAGS="--prefix=/dev/null"
+        NPM_FLAGS="--version"
 ```
 
 4. Done!
